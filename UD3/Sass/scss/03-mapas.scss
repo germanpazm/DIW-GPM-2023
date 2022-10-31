@@ -1,0 +1,9 @@
+$mapacolores:('rojo':red,'azul':blue,'verde':green);
+
+h1 {
+    color:map-get($mapaColores,'rojo');
+
+}
+p {
+    color:map-get($mapaColores,'azul');
+}       

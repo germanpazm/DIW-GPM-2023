@@ -1,0 +1,22 @@
+@mixin bordes-redondeados($color: red, $height: 150px) {}
+@mixin bordes($border-radius:60px,$-webkit-border-radius:60px,$-moz-border-radius:60px){}
+  h1 {
+    //height: 600px;
+    //background: red;
+    @include bordes-redondeados(red,600);
+
+    //border-radius: 60px;
+    //-webkit-border-radius: 60px;
+    //-moz-border-radius: 60px;
+    @include  bordes(60,60,60);
+  }
+  p {
+    //height: 150px;
+    //background: green;
+    @include bordes-redondeados(green,150 );
+    //border-radius: 15px;
+    //-webkit-border-radius: 15px;
+    //-moz-border-radius: 15px;
+    @include bordes(15,15,15);
+
+  }

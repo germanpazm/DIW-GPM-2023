@@ -1,0 +1,17 @@
+/* Error: ("1": 1, "2": 2, "3": 3) isn't a valid CSS value.
+ *    ,
+ * 15 |     .item-#{$var}{
+ *    |             ^^^^
+ *    '
+ *   scss/05-estucturas-de-control.scss 15:13  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: (\"1\": 1, \"2\": 2, \"3\": 3) isn't a valid CSS value.\a    \2577 \a 15 \2502      .item-#{$var}{\a    \2502              ^^^^\a    \2575 \a   scss/05-estucturas-de-control.scss 15:13  root stylesheet";
+}

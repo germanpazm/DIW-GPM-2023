@@ -1,0 +1,10 @@
+$color:(red,green,
+);
+
+h1 {
+    color:nth($color,1);
+
+}
+p {
+    color:nth($color,2);
+}   

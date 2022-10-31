@@ -1,0 +1,17 @@
+// rehacer mediante un for
+.item-1 { font-size: 2em; }
+.item-2 { font-size: 4em; }
+.item-3 { font-size: 6em; }
+
+
+@for $i from 1 to 4{
+    .item-#{$i}{
+        font-size: 2em*$i;
+    }
+}
+$variable:2em 4em 6em; 
+@each $i in $variable  {
+    .item-#{$i}{
+        font-size: #{$i};
+    }
+}

@@ -1,0 +1,38 @@
+// hacerlo de forma anidada
+/*#header {
+    font-size: 30px;
+}
+#header h1 {
+    color: grey;
+}
+#header p {
+    color: red;
+}
+#header p a {
+    text-decoration: none;
+}
+#header p a:hover {
+    color: green;
+}
+*/
+
+
+
+#header{
+    font-size: 30px;
+    h1{
+        color:grey;
+    }
+    p{
+        color:red;
+
+        a{
+            text-decoration: none;
+
+            &:hover{
+                color:green;
+            }
+
+        }
+    }
+}

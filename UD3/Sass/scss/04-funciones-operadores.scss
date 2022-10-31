@@ -1,0 +1,17 @@
+$borde:1em;
+$color:red;
+
+h1 {
+	background:$color;
+	border: ($borde+0.1em) solid darken($color, 20%); // rojo 20% más oscuro
+}
+p{
+	background: lighten($color, 30%); // rojo 30% más claro
+	border: ($borde -0.1em) solid $color;
+}
+
+
+@function calcularTamano($longitud: 600,$numelementos: 4){
+@return   percentage($longitud/$numelementos);
+};
+
