@@ -1,0 +1,93 @@
+// Paletas de colores básica
+//Colores generales, ¿Puedes utilizar otro tipo de dato? ¿array? ¿map?
+$color-background: #FFFFFF;
+$color-base: #333333;
+
+
+//VAIABLES con los colores de la barra de menú
+$navbar-background-color: rgb(155, 111, 145);
+$navbar-color-hover: $color-background;
+
+//VARIABLE para el color del borde 
+$border-color: $color-base;
+
+/* VARIABLE para el contenedor general de mi página*/
+$main-container-width: 80%;
+
+//VARIABLES para los bordes
+$border-width: 0.1rem;
+$border-style: "solid";
+
+$border-radius-small: 0.2rem;
+$border-radius: 1rem;
+$boder-radius-big: 2rem;
+
+// VARIABLES para las imagenes
+$figure-width: 25%;
+
+.container {
+    width: $main-container-width;
+    margin: 0 auto;   
+}
+
+/*Usando anidamiento crear la hoja de estilos para un menú */
+nav {
+    background-color:$navbar-background-color ;
+    padding: 0.2rem;   
+    /* Zona de estilos del nav*/
+
+    ul {
+        li{
+            display: inline-block;
+            padding-left: 1rem;
+            padding-right:1rem ;
+
+            &.active{
+                color:$navbar-color-hover;
+                font-weight: bolder;
+
+            }
+            &:hover{
+                color:$navbar-color-hover;
+
+            }
+            a{
+                text-decoration: none;
+            }
+            
+                
+            }
+
+        }
+
+        
+        
+        /* Zona de estilos de la lista dentro del nav*/
+        
+    }
+
+
+/*Estructura de anidamiento para la figura (cards)*/
+
+
+figure.card {
+    display:inline-block;
+    border-radius:$border-radius-small;
+    border:$border-width #{$border-style} $color-base;
+    padding: 1rem;
+    width:$figure-width;
+    img{
+        width: 100%;
+        border-radius:$boder-radius-big;
+
+        
+        
+    }
+    figcaption{
+        font-size: 0.8rem;
+        margin: 0.5rem;
+        text-align:center;
+    }
+    /* Zona de estilos para las etiquetas img y figcaption*/
+        
+}
