@@ -1,0 +1,57 @@
+
+body{
+    background-color:beige;
+}
+table{
+    background-color: grey;
+    margin:0 auto;   
+    margin-top: 100px;
+    width: 900px;
+    height: 500px;
+    text-align: center;
+    margin-bottom:50px;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+  
+header div {
+    display: inline-block;
+    padding: 10px;
+    width: 20%;
+    height: 30px;
+}
+nav{
+    text-align: center;
+}
+footer{
+    background-color: green;
+    height: 100px;
+
+}
+
+.link{
+    width: 15%;
+    height: 10%;
+    margin:20px 20px 20px 20px;
+    float: right;
+}
+
+.link2{
+    width: 15%;
+    height: 10%;
+    margin:20px 20px 20px 20px;
+    float: left;
+}
+
+.link3{
+    width: 15%;
+    height: 10%;
+    margin:20px 20px 20px 25%;
+}
+
+
