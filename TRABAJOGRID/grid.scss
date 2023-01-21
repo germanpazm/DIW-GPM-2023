@@ -1,0 +1,199 @@
+//COMUNES
+* {
+    box-sizing: border-box;
+    margin: auto 0;
+    padding: 0;
+}
+
+.ocultar{
+    display: none;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col"]
+{
+    float: left;
+    padding: 15px;
+}
+
+//Movil
+
+$colWidth: 25%,
+50%,
+75%,
+100%;
+
+@for $i from 1 to 5 {
+
+    .col#{$i} {
+        width: nth($colWidth, $i);
+    }
+}
+//HEADER
+header
+{
+    background-color: grey;
+    height: 10vh;
+    position: sticky;
+    text-align: center;
+    line-height: 10vh;
+    & > h1
+    {
+        font-size: 6vh;
+    }
+}
+//PARTIDO DEL DIA
+.row > .col4 > h1, h2 {
+    text-align: center;
+    color: yellow;
+    background-color: red;
+    transform: skew(15deg);
+    width: 75%;
+    margin: 1vh auto;
+}
+//BARRA NAV SUPERIOR
+.row .col4 ul {
+    border: 1vw solid black;
+    font-size: 3vh;
+    text-align: center;
+}
+.row>.col4>ul >li {
+    list-style: none;
+    display: inline;
+    &
+    {
+        padding-right: 1vw;
+        border: none;
+        transition: all .5s ease-in;
+    }
+    &:hover
+    {
+        background-color: red;
+        color: yellow;
+        border-right: .5vw solid yellow;
+        transition: all .5s ease-in;
+    }
+}
+.row .col2 ul li
+{
+    text-align: center;
+    list-style: none
+}
+//FIN BARRA NAV
+//TITULOS DEL PARTIDO DEL DIA
+.row > .col2 > h1
+{
+    font-size: 3vh;
+    text-align: center;
+    margin-bottom: .8vh;
+    transform: skew(15deg);
+    &.inter
+    {
+    color: white;
+    background-color: rgba($color: cyan, $alpha: .8);
+    }
+    &.union
+    {
+        color: white;
+        background-color: red;
+    }
+}
+//IMAGENES
+img:not(footer > img) {
+    width: 100%;
+    height: 30vh;
+    box-shadow: 5px 5px 20px black;
+}
+//PROXIMOS PARTIDOS
+.row:nth-child(7) .col2, .row:nth-child(8) .col2
+{
+    border-right: .3vh solid black;
+    border-bottom: .3vh solid black;
+    border-top: .3vh solid black;
+}
+.row .col2 p
+{
+    text-align: center;
+    font-size: 4vh;
+    & > img{
+        width: 30vw;
+        height: 10vh;
+    }
+}
+//VIDEO
+.video
+{
+    margin-bottom: 9vh;
+    & > iframe
+    {
+        width: 100vw;
+        height: 50vh;
+    }
+}
+//FOOTER
+footer {
+    display: flex;
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    & > img{
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        height: 5vh;
+        width: 5vw;
+    }
+}
+
+
+//TABLET
+@media only screen and (min-width: 600px) {
+    body{
+        background-color: red;
+    }
+    $colWidth: 12.5%,25%,37.5%,50%,62.5%,75%,87.5%,100%;
+
+    
+    @for $i from 1 to 9 {
+    
+        .col#{$i} {
+            width: nth($colWidth, $i);
+        }
+    }
+
+
+   .row:nth-child(7) .col2, .row:nth-child(8) .col2
+{
+    border-right: .3vh solid black;
+    border-bottom: .3vh solid black;
+    border-top: .3vh solid black;
+}
+.row .col2 p
+{
+    text-align: center;
+    font-size: 4vh;
+    & > img{
+        width: 10vw;
+        height: 20vh;
+    }
+}
+
+.ocultar{
+    display: block;
+}
+}
+
+//ESCRITORIO
+@media only screen and (min-width: 992px) {
+    body{
+        background-color: blue;
+    }
+}
+
+
