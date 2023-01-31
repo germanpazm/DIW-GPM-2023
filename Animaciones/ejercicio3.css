@@ -1,0 +1,9 @@
+body{
+    background-color: grey;
+    transition-duration: 1s;
+}
+
+input:hover{
+border-radius: 5px solid black;
+background-color: lightblue;
+}

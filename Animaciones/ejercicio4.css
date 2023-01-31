@@ -1,0 +1,19 @@
+.balon{
+width: 15%;
+padding-left: 90px;
+position: absolute;
+animation: animacion 9.4s infinite;
+
+
+}
+
+@keyframes animacion {
+    from {top: 0px;}
+    to {top: 600px;}
+  }
+.torre{
+    position: absolute  ;
+}
+.balon:hover{
+    animation-timing-function: linear
+}
