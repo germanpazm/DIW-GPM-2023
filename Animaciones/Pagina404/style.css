@@ -1,0 +1,103 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    content: '';
+  position: absolute;
+}
+
+body{
+	background: lightsalmon;
+	background-image: linear-gradient( 135deg, lightsalmon 10%, lightsalmon 100%);
+	background-attachment: fixed;
+	background-size: cover;
+
+}
+
+img{
+  width: 50%;
+ margin-left: 5%  ;
+}
+.error{
+	width: 100%;
+	height: auto;
+	margin: 50px auto;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.dracula{
+	width: 230px;
+	height: 300px;
+	display: inline-block;
+	margin: auto;
+}
+
+.error .p {
+	height: 100%;
+	color:black; 
+	font-size: 280px;
+	margin: 50px;
+	display: inline-block;
+	font-family: 'Anton', sans-serif; 
+	font-family: 'Combo', cursive;
+}
+
+
+
+
+.con {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: 9% auto 0;
+animation: ani9 0.7s ease-in-out infinite  alternate ;}
+
+@keyframes ani9 {
+    0%{
+    transform: translateY(10px);	
+  }
+  
+  100%{
+    transform: translateY(30px);	
+  }
+
+}
+
+
+.con > * {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.page-ms {transform: translateY(-50px);}
+
+.error p.page-msg {
+	text-align: center;
+	color: black; 
+	font-size: 30px;
+	font-family: 'Combo', cursive;
+	margin-bottom: 20px;
+}
+
+button.go-back {
+		font-size: 30px;
+    font-family: 'Combo', cursive;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    z-index: 9;
+    border-radius: 10px;
+    background: #C0D7DD;
+    color: #33265C;     
+    box-shadow: 0 0 10px 0 #C0D7DD;
+	margin-top: 20px;
+}
+button:hover {box-shadow: 0 0 20px 0 #C0D7DD;}
+
+
