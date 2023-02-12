@@ -1,0 +1,677 @@
+//COMUNES
+* {
+    box-sizing: border-box;
+    margin: auto 0;
+    padding: 0;
+}
+
+$base1: 25%;
+$base2: 12.5%;
+$base3: 8.3333%;
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col"] {
+    float: left;
+    padding: 15px;
+}
+
+//FOOTER
+footer {
+    display: flex;
+    background-color: slategray;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+
+    &>img {
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        height: 5vh;
+        width: 5vw;
+    }
+}
+
+//ESCRITORIO
+@media only screen and (min-width: 992px) {
+
+    @for $i from 1 to 13 {
+        @if $i==12 {
+            .col#{$i} {
+                width: 100%;
+            }
+        }
+
+        @else {
+            .col#{$i} {
+                width: ($base3*$i)
+            }
+        }
+    }
+
+    body {
+        background-color: lightsteelblue;
+        overflow-x: hidden;
+    }
+
+    header {
+        height: 10vh;
+        color: black;
+        position: sticky;
+
+        text-align: center;
+        line-height: 10vh;
+    }
+
+    .row>.col-6>#nav {
+        border: .5vh solid slategray;
+        background-color: rgba(128, 128, 128, .3);
+        color: royalblue;
+        border-radius: 10vh;
+        font-size: 2.5vw;
+        padding: .8vh;
+        text-align: center;
+    }
+
+    header h1 {
+        background-color: rgba(65, 105, 225, .6);
+        border: .5vw solid skyblue;
+        font-size: 6vw;
+    }
+
+    .row>.col6>img {
+        width: 100%;
+        margin-left: 50%;
+    }
+
+    .row .col4>td {
+        font-size: 1.3vw;
+        padding: .8vh;
+
+        &>p {
+            display: inline;
+        }
+
+        &>img {
+            width: 2vw;
+            height: 4vh;
+            box-shadow: 5px 5px 20px black;
+        }
+    }
+
+    .row>.col6>#palmares {
+        margin-left: 30vw;
+        margin-bottom: 9vh;
+        width: 75%;
+        text-align: left;
+
+        &>li {
+            display: block;
+        }
+    }
+
+    table {
+        width: 70%;
+        margin: 0 auto;
+        border: .1vh solid grey;
+        background-color: lightgray;
+    }
+
+    table tr {
+        border: .1vh solid black;
+        background-color: white;
+
+        & td {
+            text-align: center;
+        }
+    }
+
+    .row>.col4>h1,
+    h2 {
+        text-align: center;
+        background-color: rgba(65, 105, 225, .6);
+        border: .5vw solid skyblue;
+        border-radius: 10vh;
+        transform: skew(15deg);
+        width: 75%;
+        margin: 1vh auto;
+    }
+
+    .row .col4 ul {
+        color: white;
+        background-color: black;
+        text-align: center;
+        border: 1vw solid black;
+    }
+
+    .row .col4>ul>li {
+        list-style: none;
+        display: inline;
+        padding-right: 1vw;
+        border: none;
+        transition: all .5s ease-in;
+    }
+
+    .row .col2 ul li {
+        text-align: center;
+        list-style: none;
+    }
+
+    .row>.col2>h1 {
+        font-size: 3vh;
+        text-align: center;
+        margin-bottom: .8vh;
+    }
+
+    .row>.col2>h1 {
+        transform: skew(15deg);
+        &.inter {
+            color: white;
+            background-color: rgba($color: cyan, $alpha: .8);
+        }
+
+        &.union {
+            color: white;
+            background-color: red;
+        }
+    }
+
+    img:not(footer > img) {
+        width: 100%;
+        height: 30vh;
+        box-shadow: 5px 5px 20px black;
+    }
+
+    .row:nth-child(7) .col2,
+    .row:nth-child(8) .col2 {
+        border-right: .3vh solid black;
+
+        border-top: .3vh solid black;
+    }
+
+
+    .row .col2 p {
+        text-align: center;
+        font-size: 4vh;
+
+    }
+
+    .row .col2 p>img {
+        width: 10vw;
+        margin-left: 4vh;
+        text-align: center;
+        height: 10vh;
+    }
+
+    .video {
+        margin-bottom: 9vh;
+    }
+
+    .video iframe {
+        margin-left: 50vh;
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+    }
+
+    .row .col4 .partido {
+        background-color: yellow;
+        height: 10vh;
+        border-radius: 15px;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 1px;
+        font-size: 40px;
+    }
+
+    .row .col4 .partido .texto {
+        text-align: center;
+        font-size: 3.5vw;
+        color: black;
+    }
+
+    .row>.col2>h2.alineacion {
+        color: black;
+    }
+
+    .plantilla {
+        width: 10vw;
+        height: 50vh;
+    }
+
+    .row>.col2 img {
+        max-width: 50%;
+        margin-left: 25%;
+    }
+
+    .video {
+        margin-bottom: 9vh;
+    }
+
+    .div-localizacion .localizacion {
+        background-color: black;
+    }
+
+    .video>iframe {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    footer {
+        background-color: yellow;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 10vh;
+    }
+
+    footer>img {
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        height: 4vh;
+        width: 4vw;
+    }
+
+}
+
+//TABLET
+@media only screen and (min-width: 600px) and (max-width:991px) {
+
+    @for $i from 1 to 9 {
+        .col-#{$i} {
+            width: ($base2*$i)
+        }
+    }
+
+    body {
+        overflow-x: hidden;
+        background-color: lightsteelblue;
+    }
+
+    //HEADER
+    header {
+        background-color: grey;
+        height: 10vh;
+        position: sticky;
+        text-align: center;
+        line-height: 10vh;
+
+        &>h1 {
+            font-size: 5vw;
+            color: black;
+            background-color: rgba(65, 105, 225, .6);
+            border: .5vw solid skyblue;
+        }
+    }
+
+    //PARTIDO DEL DIA
+    .row>.col-8>h1,
+    h2 {
+        text-align: center;
+        color: black;
+        background-color: rgba(65, 105, 225, .6);
+        border: .5vw solid skyblue;
+        border-radius: 10vh;
+        transform: skew(15deg);
+        width: 75%;
+        margin: 1vh auto;
+    }
+
+    h2.alineacion {
+        font-size: 2.5vw;
+    }
+
+    //BARRA NAV SUPERIOR
+    .row .col-8 #palmares {
+        font-size: 2vw;
+
+        &>li {
+            border-left: .5vw solid black;
+            margin: 0 0 .8vh;
+        }
+
+        &:last-child {
+            margin-bottom: 9vh;
+        }
+
+        &:last-child>li {
+            display: block;
+        }
+    }
+
+
+    table {
+        width: 60%;
+        padding: 1vh;
+        margin: 0 auto 2vh;
+        border: .1vh solid rgba(128, 128, 128, .1);
+        background-color: lightgray;
+    }
+
+    table tr {
+        border: .1vh solid black;
+        background-color: white;
+
+        & td {
+            text-align: center;
+        }
+    }
+
+    .row .col-8>td {
+        font-size: 3.2vw;
+        padding: .8vh;
+
+        &>img {
+            width: 10vw;
+            height: 10vh;
+        }
+    }
+
+    .row>.col-6 {
+        margin-left: 12.5%;
+    }
+
+    .row>.col-6>#nav {
+        border: .5vh solid slategray;
+        font-size: 3.5vw;
+        background-color: rgba(128, 128, 128, .3);
+        color: royalblue;
+        border-radius: 10vh;
+        padding: .8vh;
+        text-align: center;
+    }
+
+    .row>.col-6>#nav>li {
+        list-style: none;
+        display: inline;
+
+        & {
+            padding-right: 1vw;
+            border: none;
+            transition: all .5s ease-in;
+        }
+
+        &:hover {
+            background-color: paleturquoise;
+            color: steelblue;
+            transition: all .5s ease-in;
+        }
+    }
+
+    .row .col-2 ul li {
+        text-align: center;
+        list-style: none
+    }
+
+    //FIN BARRA NAV
+    //TITULOS DEL PARTIDO DEL DIA
+    .row>.col-2>h1 {
+        font-size: 110%;
+        text-align: center;
+        margin-bottom: .8vh;
+        transform: skew(15deg);
+
+        &.inter {
+            color: white;
+            background-color: rgba($color: cyan, $alpha: .8);
+        }
+
+        &.union {
+            color: white;
+            background-color: red;
+        }
+    }
+
+    //IMAGENES
+    img:not(footer > img) {
+        width: 100%;
+        height: 30vh;
+        box-shadow: 5px 5px 20px black;
+    }
+
+    //PROXIMOS PARTIDOS
+    .row:nth-child(7) .col-2,
+    .row:nth-child(8) .col-2 {
+        border-right: .3vh solid black;
+        border-bottom: .3vh solid black;
+        border-top: .3vh solid black;
+
+        &:nth-child(2) {
+            border-right: none;
+        }
+    }
+
+    .row .col-4>img {
+        width: 90%;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .row .col-2 {
+        &>p {
+            text-align: center;
+            font-size: 5vh;
+        }
+
+        &>img {
+            max-width: 30vw;
+            max-height: 10vh;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+    }
+
+    //VIDEO
+    .video {
+        margin-bottom: 9vh;
+
+        &>iframe {
+            width: 100%;
+            height: 50vh;
+        }
+    }
+}
+
+//MOVIL
+@media only screen and (max-width: 600px) {
+
+    @for $i from 1 to 5 {
+        .col#{$i} {
+            width: ($base1*$i)
+        }
+    }
+
+    body {
+        overflow-x: hidden;
+        background-color: lightsteelblue;
+    }
+
+    //HEADER
+    header {
+        background-color: grey;
+        height: 10vh;
+        position: sticky;
+        text-align: center;
+        line-height: 10vh;
+
+        &>h1 {
+            font-size: 6vw;
+            background-color: rgba(65, 105, 225, .6);
+            border: .5vw solid skyblue;
+        }
+    }
+
+    //PARTIDO DEL DIA
+    .row>.col4>h1,
+    h2 {
+        text-align: center;
+        background-color: rgba(65, 105, 225, .6);
+        border: .5vw solid skyblue;
+        border-radius: 10vh;
+        transform: skew(15deg);
+        width: 75%;
+        margin: 1vh auto;
+    }
+
+    //BARRA NAV SUPERIOR
+    .row .col4 #palmares {
+        font-size: 2.5vw;
+
+        &>li {
+            border-left: .5vw solid black;
+            margin: 0 0 .8vh;
+        }
+
+        &:last-child {
+            margin-bottom: 9vh;
+        }
+
+        &:last-child>li {
+            display: block;
+        }
+
+        &:last-child>li:hover {
+            background-color: white;
+            color: black;
+            border: none;
+        }
+    }
+
+    table {
+        width: 90%;
+        padding: .5vh;
+        margin: 0 auto 2vh;
+        border: .1vh solid grey;
+        background-color: lightgray;
+    }
+
+    table tr {
+        border: .1vh solid black;
+        background-color: white;
+
+        & td {
+            text-align: center;
+        }
+    }
+
+    h2.alineacion {
+        font-size: 3vw;
+    }
+
+    .row .col4>td {
+        font-size: 5vw;
+        padding: 0 0 0 2vh;
+
+
+        &>img {
+            width: 15vw;
+            height: 15vh;
+            box-shadow: 5px 5px 20px black;
+        }
+    }
+
+    .row>.col4>#nav {
+        border: .5vh solid slategray;
+        font-size: 3.5vw;
+        background-color: rgba(128, 128, 128, .3);
+        color: royalblue;
+        border-radius: 10vh;
+        padding: 1vh;
+        text-align: center;
+    }
+
+    .row>.col4>#nav>li {
+        list-style: none;
+        display: inline;
+
+        & {
+            padding-right: 1vw;
+            border: none;
+            transition: all .5s ease-in;
+        }
+
+        &:hover {
+            background-color: red;
+            color: yellow;
+            border-right: .5vw solid yellow;
+            transition: all .5s ease-in;
+        }
+    }
+
+    .row .col2 ul li {
+        text-align: center;
+        list-style: none
+    }
+
+    //FIN BARRA NAV
+    //TITULOS DEL PARTIDO DEL DIA
+    .row>.col2>h1 {
+        font-size: 3vw;
+        text-align: center;
+        margin-bottom: .8vh;
+        transform: skew(15deg);
+
+        &.inter {
+            color: white;
+            background-color: rgba($color: cyan, $alpha: .8);
+        }
+
+        &.union {
+            color: white;
+            background-color: red;
+        }
+    }
+
+    //IMAGENES
+    img:not(footer > img) {
+        width: 100%;
+        height: 30vh;
+        box-shadow: 5px 5px 20px black;
+    }
+
+    //PROXIMOS PARTIDOS
+    .row:nth-child(7) .col2,
+    .row:nth-child(8) .col2 {
+        border-right: .3vh solid black;
+        border-bottom: .3vh solid black;
+        border-top: .3vh solid black;
+
+        &:nth-child(2) {
+            border-right: none;
+        }
+    }
+
+    .row .col2 {
+        &>p {
+            text-align: center;
+            font-size: 5vh;
+        }
+
+        &>img {
+            max-width: 30vw;
+            max-height: 10vh;
+            margin-left: 15%;
+        }
+    }
+
+    //VIDEO
+    .video {
+        margin-bottom: 9vh;
+
+        &>iframe {
+            width: 100%;
+            height: 50vh;
+        }
+    }
+
+
+
+}
