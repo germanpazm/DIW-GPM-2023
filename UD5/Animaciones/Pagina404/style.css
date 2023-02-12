@@ -11,8 +11,8 @@
 }
 
 body{
-	background: lightsalmon;
-	background-image: linear-gradient( 135deg, lightsalmon 10%, lightsalmon 100%);
+	background: lightblue;
+	background-image: linear-gradient( 135deg, lightblue 10%, lightblue 100%);
 	background-attachment: fixed;
 	background-size: cover;
 
@@ -30,7 +30,7 @@ img{
 	margin-bottom: 0;
 }
 
-.dracula{
+.balon{
 	width: 230px;
 	height: 300px;
 	display: inline-block;
@@ -55,17 +55,21 @@ img{
   height: 500px;
   position: relative;
   margin: 9% auto 0;
-animation: ani9 0.7s ease-in-out infinite  alternate ;}
+  animation: moverbola 0.7s ease-in-out infinite alternate;
+}
 
-@keyframes ani9 {
+@keyframes moverbola {
     0%{
-    transform: translateY(10px);	
+    transform: translateX(0) translateY(0);
+  }
+  
+  50%{
+    transform: translateX(500px) translateY(500px);
   }
   
   100%{
-    transform: translateY(30px);	
+    transform: translateX(0) translateY(0);
   }
-
 }
 
 
@@ -74,9 +78,9 @@ animation: ani9 0.7s ease-in-out infinite  alternate ;}
   top: 0; left: 0;
 }
 
-.page-ms {transform: translateY(-50px);}
+.ms {transform: translateY(-50px);}
 
-.error p.page-msg {
+.error p.mensaje {
 	text-align: center;
 	color: black; 
 	font-size: 30px;
@@ -84,7 +88,7 @@ animation: ani9 0.7s ease-in-out infinite  alternate ;}
 	margin-bottom: 20px;
 }
 
-button.go-back {
+button.volver {
 		font-size: 30px;
     font-family: 'Combo', cursive;
     border: none;
@@ -100,4 +104,12 @@ button.go-back {
 }
 button:hover {box-shadow: 0 0 20px 0 #C0D7DD;}
 
+.porteria{
+  width: 20%;
 
+
+}
+.a{
+  display: flex;
+  justify-content: flex-end;
+}
